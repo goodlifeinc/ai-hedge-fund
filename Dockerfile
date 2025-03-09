@@ -11,6 +11,8 @@ RUN apt update && apt install -y build-essential \
     && pip install poetry \
     && poetry install
 
-ENTRYPOINT ["poetry", "run", "python", "-u", "src/main.py"]
+EXPOSE 7860
 
-CMD ["--ticker", "AAPL"] 
+ENTRYPOINT ["poetry", "run", "python", "-u", "src/gradio_app.py"]
+
+# CMD ["--ticker", "AAPL"]

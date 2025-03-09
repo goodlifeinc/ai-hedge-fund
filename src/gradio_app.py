@@ -137,4 +137,4 @@ def create_gradio_interface():
 
 if __name__ == "__main__":
     gradio_app = create_gradio_interface()
-    gradio_app.launch(share=False)
+    gradio_app.launch(server_name='0.0.0.0', share=False)
