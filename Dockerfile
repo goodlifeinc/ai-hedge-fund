@@ -9,7 +9,7 @@ COPY . .
 RUN apt update && apt install -y build-essential \
     && rm -rf /var/lib/apt/lists/* \
     && pip install poetry \
-    && poetry install
+    && poetry lock && poetry install
 
 EXPOSE 7860
 
